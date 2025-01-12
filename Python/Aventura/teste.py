@@ -1,131 +1,193 @@
 import random
 
-print("Bem-vindo a Jumanji!!")
-print("Objetivo: buscar no interior da floresta a fonte da ilha LIGWARK\n")
+def caverna():
+  print("Você entrou na caverna.")
+  if vidas > 0:
+    print("Dentro da caverna vocẽ acha a grande pedra brilhando no topo de uma torre...")
+    print("LIGWARK")
+    if escolha2 == '2':
+      input("Narrador:  Seguinte cabeça de vento, não me estressa tá.")
+      input("Narrador:  Você so precisa pegar e ir embora só isso.\nVai lá que eu fico orando, não confio em você...")
+      print("1) Subir na torre de 15 metros e pegar a pedra e retornar para vila.\n2) tentar jogar uma pedra na pedra para nao precisa subir na torre.")
 
-nome = input("Digite seu nome: ")
-print(f"Escolha uma dificuldade para começar:\n")
+      input("Narrador:  Olha eu sei que a gente se desentendeu mas isso é passado agora sobe lá e vamo embora né não vai ficar tacando pedra daqui... ")
+      input(f"Narrador:  Ouviu {nome} vai lá...")
+      input(f"Narrador:  {nome} ??")
 
-dificuldade = ""
-while dificuldade not in ["1", "2", "3", "4"]:
-    print("1) Fácil 😌")
-    print("2) Médio 😐")
-    print("3) Difícil 😠")
-    print("4) Tom Cruise 😎")
-
-    dificuldade = input("\nEscolha um número apresentado acima: ").strip().lower()
-    if dificuldade == '1':
-        vidas = 5
-        caminhos = 2
-    elif dificuldade == '2':
-        vidas = 3
-        caminhos = 3
-    elif dificuldade == '3':
-        vidas = 2
-        caminhos = 4
-    elif dificuldade == '4':
-        vidas = 1
-        caminhos = 5
+      final = input("1) Subir\n2)Jogar pedra ?  1-2  ")
+      if final == '1':
+        print(f"Narrador:  Ainda bem que você me ouviu {nome}")
+        input("Narrador:  Achei mesmo que você ia jogar pedras 😅😅")
+        input("Você recuperou a pedra dos Jabaz!!!")
+        print("Parabéns você salvou todos da ilha!!\n")
+      else:
+        input("Narrador:  NÃÃÃÃÃÃÃÃÃOOOOOOO")
+        input(f"Narrador:  O QUE EU TE FALEI {nome} 🤦 🤦")
+        input("Você sem querer joga uma pedra na LIGWARK e ela esta caindo da torre...")
+        input("Narrador:  PEGA ELA VAIIIIII NÃO DEIXA ELA CAIR NO CHÃO")
+        print("Rode um dado aleatório para ver se voce pode pegar a LIGWARK antes de cair.")
+        input("Se cair 1 ou 2 você não pega\nSe cair 5 ou 6 você pega\nSe cair 3 ou 4 o narrador decide.")
+        input(f"No 3 {nome}")
+        input("1")
+        input("2")
+        input("3")
+        dado = random.randint(1, 6)
+        print(f"O número sorteado foi: {dado}")
+        if dado == '1' or '2':
+          input("Você não conseguiu pegar e a pedra se partiu em 2")
+          input("Narrador:  Pelo amor em nem pra isso você se consagra 🤦 😒")
+          print("Você perdeu  👎 👎")
+          print("Narrador:  LOSER 👎 ")
+        elif dado == '3':
+          print("O narrador escolhe o que fazer.")
+          input("\nNarrador:  NÃO, VOCÊ NÃO MERECE.")
+          input("O narrador quebrou a pedra dos jabaz em pedaços")
+          print("Você perdeu  👎 👎")
+        elif dado == '4':
+          print("O narrador escolhe o que fazer.")
+          input("\nNarrador:  NÃO, VOCÊ NÃO MERECE.")
+          input("Narrador:  Eu so vou te entregar por eles")
+          input(f"Narrador:  porque você é horrivel nisso {nome}")
+          input("Você recuperou a pedra dos Jabaz!!!")
+          input("De um jeito ou de outro você salvou os jabaz!!!")
+          print("Parabéns você salvou todos da ilha!!\n")
+        elif dado == '5' or '6':
+          input("Você consegui pegar a pedra")
+          input("Narrador:  Ainda bem ufaaaa 😅😅")
+          input(f"Narrador:  Sempre confiei em você {nome} 🤥🤥")
+          input("Você recuperou a pedra dos Jabaz!!!")
+          print("Parabéns você salvou todos da ilha!!\n")
     else:
-        print("\nNenhuma dificuldade escolhida")
+      input(f"Narrador:  Seguinte {nome}.")
+      input("Narrador:  Você so precisa pegar e ir a gente volta.\nVai lá que eu fico orando, confio em você...")
+      print("\n1) Subir na torre de 15 metros e pegar a pedra e retornar para vila.\n2) tentar jogar uma pedra na pedra para nao precisa subir na torre.\n")
+      input("Narrador:  Acho melhor você subir...mais confiavel")
+      final2 = input("1) Subir\n2)Jogar pedra ?  1-2  ")
+      if final2 == '1':
+        print(f"Narrador:  Ainda bem que você me ouviu {nome}")
+        input("Narrador:  Achei mesmo que você ia jogar pedras 😅😅")
+        input("Você recuperou a pedra dos Jabaz!!!")
+        print("Parabéns você salvou todos da ilha!!\n")
+      else:
+        input("Narrador:  NÃÃÃÃÃÃÃÃÃOOOOOOO")
+        input(f"Narrador:  O QUE EU TE FALEI {nome} 🤦 🤦")
+        input("Você sem querer joga uma pedra na LIGWARK e ela esta caindo da torre...")
+        input("Narrador:  PEGA ELA VAIIIIII NÃO DEIXA ELA CAIR NO CHÃO")
+        print("Rode um dado aleatório para ver se voce pode pegar a LIGWARK antes de cair.")
+        input("Se cair 1 ou 2 você não pega\nSe cair 5 ou 6 você pega\nSe cair 3 ou 4 o narrador decide.")
+        input(f"No 3 {nome}")
+        input("1")
+        input("2")
+        input("3")
+        dado = random.randint(1, 6)
+        print(f"O número sorteado foi: {dado}")
+        if dado == '1' or '2':
+          input("Você não conseguiu pegar e a pedra se partiu em 2")
+          input("Narrador:  Pelo amor em nem pra isso você se consagra 🤦 😒")
+          print("Você perdeu  👎 👎")
+          print("Narrador:  LOSER 👎 ")
+        elif dado == '3':
+          print("O narrador escolhe o que fazer.")
+          input("\nNarrador:  NÃO, VOCÊ NÃO MERECE.")
+          input("O narrador quebrou a pedra dos jabaz em pedaços")
+          print("Você perdeu  👎 👎")
+        elif dado == '4':
+          print("O narrador escolhe o que fazer.")
+          input("\nNarrador:  NÃO, VOCÊ NÃO MERECE.")
+          input("Narrador:  Eu so vou te entregar por eles")
+          input(f"Narrador:  porque você é horrivel nisso {nome}")
+          input("Você recuperou a pedra dos Jabaz!!!")
+          input("De um jeito ou de outro você salvou os jabaz!!!")
+          print("Parabéns você salvou todos da ilha!!\n")
+        elif dado == '5' or '6':
+          input("Você consegui pegar a pedra")
+          input("Narrador:  Ainda bem ufaaaa 😅😅")
+          input(f"Narrador:  Sempre confiei em você {nome} 🤥🤥")
+          input("Você recuperou a pedra dos Jabaz!!!")
+          print("Parabéns você salvou todos da ilha!!\n")
 
-print("\nVocê chegou a Jumanji, terra dos Jabaz...")
-print("Mas a ilha estava um caos, e escurecendo.\nEntão você caminha até o chefe da ilha para entender a situação.\n")
-print(f"Olá, meu nome é {nome}, acabei de chegar de Teco Teco, o que está acontecendo??")
-print(f"\nChefe da Ilha: {nome}, por favor!!! NOS AJUDEEEEE.\nNós fomos roubados por seres da ilha, não sabemos\nmuito sobre eles, mas eles levaram nossa pedra de ligwark, ela dá vida à nossa ilha.")
+print("Bem vindo a jumaji!!")
+print("Objetivo buscar no interior da floresta a fonte da ilha LIGWARK\n")
 
-comeco = input("Nos ajude a recuperá-la? (s/n) ").strip().lower()
+nome = input("Digite seu nome: ").strip().capitalize()
+vidas = 3
+print(f"\nNome legal, conheci uma pessoa chamada {nome}, era bastate inteligente\nAposto que você tambem.")
+input("\nVamos começar...")
+print("\nVocê chegou a Jumanji terra dos Jabaz...")
+print("Mas a ilha estava um caus, e escurecendo.\nEntão você caminha até o chefe da ilha para entender a situação.\n")
+print(f"Olá meu nome é {nome} acabei de chegar de Teco Teco, o que está acontecendo ??")
+print(f"\nChefe da Ilha: {nome} Por favor!!! NOS AJUDEEEEE.\nNós fomos roubados por seres da ilha, não sabemos\nmuito sobre eles mas eles levaram nossa pedra de ligwark, ela da vida a nossa ilha.")
+
+comeco = input("Nos ajude a recupera-lá ? (s/n) ").strip().lower()
 if comeco == "s":
-    print("\nChefe: Obrigado!!!\nVamos te dar algumas instruções para a viagem.\n")
+  print("\nChefe: Obrigado!!!\nVamos te dar algumas intruções para a viagem.\n")
 else:
-    print("\nChefe: Infelizmente você vai assim mesmo, não tem jeito.\nVamos te auxiliar pelo caminho, relaxa.\n")
+  print("\nChefe: Infelimente você vai assim mesmo, não tem jeito.\nVamos te auxiliar pelo caminho relaxa.\n")
 
-# Começo da aventura - instruções
-print("Chefe: Traga nossa pedra desvendando desafios e passando por perigos durante sua jornada.")
-print(f"Chefe: Você tem {vidas} vida(s), tome muito cuidado, pois a cada erro você perde 1 vida.\nNão queira saber o que acontece quando elas acabam -_-")
+  #começo da aventura - intruçoões
+print("Chefe: Traga nossa pedra desvendando desafios e passando por perigos durante o sua jornada.")
+print(f"Chefe: Você tem {vidas} vida(s), tome muito cuidado pois a cada erro voce perde 1 vida\nnão queira saber o que acontece quando elas acabam -_-")
 
 print("\nChefe: Bem...\nAcho que é isso...")
-print(f"Chefe: Ahhh, quase ia me esquecendo, você terá que escolher entre {caminhos} caminhos para encontrar a Ligwark.\nBoa sorte!")
-
-print(f"Vida(s): {vidas}")
+print(f"Chefe: Ahhh quase ia me esquecendo você terá que escolher entre alguns caminhos para encontrar a Ligwark.\nBoa sorte!")
 print("Saindo da Vila dos Jabaz...\n")
 
-# Lista de enigmas
-enigma = [
-    {"pergunta": "O que é? O que é? Sempre está na sua frente, mas você nunca pode vê-lo.", "resposta": "futuro"},
-    {"pergunta": "O que é? O que é? Quanto mais se tira, maior fica.", "resposta": "buraco"},
-    {"pergunta": "O que é? O que é? Não se pode ver, mas faz tudo à nossa volta se mover.", "resposta": "vento"},
-    {"pergunta": "O que é? O que é? Anda sem pés e voa sem asas.", "resposta": "tempo"},
-    {"pergunta": "O que é? O que é? Quanto mais cresce, mais leve fica.", "resposta": "fumaça"},
-    {"pergunta": "O que é? O que é? Quanto mais se enche, mais leve fica.", "resposta": "balão"},
-    {"pergunta": "O que é? O que é? Tem dentes, mas não come.", "resposta": "pente"},
-    {"pergunta": "O que é? O que é? Cai em pé e corre deitado.", "resposta": "chuva"},
-    {"pergunta": "O que é? O que é? É surdo, mudo, mas conta tudo.", "resposta": "relogio"},
-    {"pergunta": "O que é? O que é? Quanto mais se perde, mais se tem.", "resposta": "tempo"},
-    {"pergunta": "O que é? O que é? Sempre sobe, mas nunca desce.", "resposta": "idade"},
-    {"pergunta": "O que é? O que é? Passa na frente do sol e não faz sombra.", "resposta": "vento"},
-    {"pergunta": "O que é? O que é? Vive na ponta, mas não é espada.", "resposta": "lapis"},
-    {"pergunta": "O que é? O que é? Enche uma casa, mas não ocupa espaço.", "resposta": "luz"},
-    {"pergunta": "O que é? O que é? Tem pernas, mas não anda. Tem braços, mas não abraça.", "resposta": "cadeira"},
-    {"pergunta": "O que é? O que é? Tem um olho, mas não pode ver.", "resposta": "agulha"},
-    {"pergunta": "O que é? O que é? Você pode quebrá-lo sem tocá-lo.", "resposta": "silencio"},
-    {"pergunta": "O que é? O que é? Tem chifres, mas não é boi. Dá leite, mas não é vaca.", "resposta": "coco"},
-    {"pergunta": "O que é? O que é? Quanto mais se corre, mais parado fica.", "resposta": "esteira"},
-    {"pergunta": "O que é? O que é? É meu, mas as outras pessoas usam mais que eu.", "resposta": "nome"},
-    {"pergunta": "O que é? O que é? Tem uma boca e vive com água.", "resposta": "rio"},
-    {"pergunta": "O que é? O que é? Tem cabeça, mas não tem pescoço.", "resposta": "alho"},
-    {"pergunta": "O que é? O que é? Tem uma asa, mas não voa.", "resposta": "xicara"},
-    {"pergunta": "O que é? O que é? Sobe quando a chuva desce.", "resposta": "guarda chuva"},
-    {"pergunta": "O que é? O que é? Sempre tem pernas, mas nunca anda sozinho.", "resposta": "calça"},
-    {"pergunta": "O que é? O que é? Não tem olhos, mas ajuda a ver.", "resposta": "oculos"},
-    {"pergunta": "O que é? O que é? Quanto mais cresce, mais baixo fica.", "resposta": "vela"},
-    {"pergunta": "O que é? O que é? É feito para andar, mas não anda.", "resposta": "sapato"},
-    {"pergunta": "O que é? O que é? Nunca volta, mas está sempre na frente.", "resposta": "tempo"},
-    {"pergunta": "O que é? O que é? Tem cabeça, mas não usa chapéu.", "resposta": "fosforo"},
-    {"pergunta": "O que é? O que é? Anda o mundo inteiro sem sair do lugar.", "resposta": "selo"},
-    {"pergunta": "O que é? O que é? Sempre que fica maior, pesa menos.", "resposta": "balão"},
-    {"pergunta": "O que é? O que é? Me quebra sem ao menos me tocar.", "resposta": "promessa"},
-    {"pergunta": "O que é? O que é? Me enche, mas nunca se cansa.", "resposta": "bolha"},
-]
-
-# Função para lidar com as portas
-def escolher_porta():
-    portas = {
-        "1": "Labirinto Enigmático",
-        "2": "Trilha na Floresta",
-        "3": "Desafio Subterrâneo",
-        "4": "Missão do Céu",
-        "5": "Reino Subaquático"
-    }
-
-    for i in range(1, int(caminhos)+1):
-        print(f"{i}. {portas[str(i)]}")
-
-    porta = input(f"\nEscolha uma das portas (1-{caminhos}): ").strip()
-    if porta in portas:
-        print(f"Entrando na {portas[porta]}")
-        return porta
+if vidas > 0:
+  print("1) Labirinto Enigmatico\n2) Ponte da Cachoeira\n")
+  rota = input("escolha um caminho  1-2   ").strip().lower()
+  if rota == '1':
+    print("\nVocê entrou no labirinto Enigmatico")
+    print("O que é? O que é? Cai em pé e corre deitado.\n")
+    resposta = input("Qual a sua resposta ?  ").strip().lower()
+    if resposta == "chuva":
+      print("\nParabéns você acertou!!!\nVamos para o proximo.\n")
     else:
-        print("Porta inválida! Tente novamente.")
-        return escolher_porta()
+      print("\nVocê errou....a resposta é a (chuva)")
+      print("Até meu cachorro sabia essa 😂")
+      vidas -= 1
+      print(f"Você perdeu uma vida, agora você tem {vidas} vida(s)")
+      input("\nVamos para o proximo Enigma.")
 
-# Perguntas para resolver enigmas
-def resolver_enigma():
-    enigma_escolhido = random.choice(enigma)
-    print(f"\nEnigma: {enigma_escolhido['pergunta']}")
-    resposta = input("Sua resposta: ").strip().lower()
-    if resposta == enigma_escolhido["resposta"]:
-        print("\nParabéns! Você acertou!")
+    if vidas > 0:
+        print("\nO que é? O que é? É feito para andar, mas não anda.")
+        resposta1 = input("Qual a sua resposta ?  ").strip().lower()
+        if resposta1 == "sapato":
+          print("\nParabéns você acertou!!!\n")
+          print("Você saiu do labirinto")
+          caverna()
+        else:
+          input("Serio 😒")
+          print("\nVocê errou....a resposta é a (sapato)")
+          print("parece que você não faz honra a seu nome...")
+          vidas -= 1
+          print(f"Você perdeu uma vida, agora você tem {vidas} vida(s)")
+          caverna()
     else:
-        print(f"\nVocê errou! A resposta correta é: {enigma_escolhido['resposta']}.")
+      print("\nSuas vidas acabaram você morreu...")
+  elif rota == '2':
+    print("\nVocê foi passar pela ponte e caiu na cachoeira\nInfelizmente a ponte era muito velha\n")
+    print("Você tem apenas duas opçoẽs.")
+    print("1) Caverna embaixo da cachoeira\n2) Nadar até as pedras da cachoeira como um bebe medroso 😂😝")
+    escolha = input("qual sua escolha ? 1-2  ")
+    if escolha == '1':
+      print("\nVocê entrou na Caverna\n")
+    else:
+      input("\nVocê correu para as pedras")
+      input("Serio isso ?? 🤡\nVou te dar outra chance.")
 
-# Começo da aventura
-while vidas > 0:
-    porta_escolhida = escolher_porta()
-    resolver_enigma()
+      print("\nVocê tem apenas duas opcoẽs.")
+      print("1) CAVERNA EMBAIXO DA CACHOEIRA 😌😌\n2) Nadar até as pedras")
+      escolha2 = input("Pronto pode escolher a certa 😉.  1-2  ")
 
-    vidas -= 1
-    print(f"\nVidas restantes: {vidas}")
-    if vidas == 0:
-        print("\nVocê perdeu todas as vidas! Aventura encerrada.")
-        break
+      if escolha2 == '1':
+        print("\nUfaaa achei que ia correr denovo 😂😂\n")
+      elif escolha2 == '2':
+        input("\nOLHA SÓ NÃO É ASSIM QUE FUNCIONA O JOGO 😒😒")
+        print(f"Quer saber te dei a chance de achar que você que manda\nMas você {nome} tem a cabeça dura né")
+        input("\nAcho bom você entender quem manda aqui viu...")
+        vidas -= 1
+        print(f"Você perdeu uma vida por DESOBEDIÊNCIA\nAgora você tem {vidas} vida(s)")
+        input("😘😘😘")
+        input("E VOCÊ FOI SIM PELA CAVERNA CASO NÃO TENHA FICADO CLARO!!!")
+        caverna()
+
